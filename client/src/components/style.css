@@ -111,6 +111,17 @@ button:focus {
 	flex: 1 0 26%;
 }
 
+@media (min-width: 340px) {
+	.show-input {
+		width: 22.8rem;
+	}
+	.input {
+		max-width: 21rem;
+	}
+	.saved-calc {
+		width: 22.5rem;
+	}
+}
 @media (min-width: 375px) {
 	.show-input {
 		width: 23.8rem;
@@ -123,7 +134,7 @@ button:focus {
 	}
 }
 
-@media (min-width: 425px) {
+@media (min-width: 400px) {
 	.show-input {
 		width: 25.8rem;
 	}

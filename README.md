@@ -1,6 +1,8 @@
 # sezzle-calc-josh
-<h3>How to install:</h3>
-First do <strong>npm install</strong> then <strong>cd client && npm install</strong> to install. Then <strong>npm start</strong> at both client and server to run the app!
+<h3>How to install and start:</h3>
+1.npm install
+2.cd client && npm install 
+3.npm start at both client and server to run the app!
 
 <h3>How to use:</h3>
 This is your standard calculator except for that it allows you to send real-time calculations to other users connected to the app.

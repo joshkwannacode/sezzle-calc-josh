@@ -1,0 +1,135 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background-color: #070707;
+}
+.wrapper {
+	max-width: 420px;
+	min-height: 96vh;
+	margin: 0 auto;
+}
+
+/* buttons */
+
+button {
+	font-size: 2rem;
+	cursor: pointer;
+	border-radius: 2px;
+	background-color: #222121;
+}
+button:active {
+	background-color: rgb(214, 209, 209);
+}
+button:focus {
+	outline: none;
+}
+.modifiers button {
+	border: none;
+	color: orange;
+}
+.operations button {
+	color: orange;
+	width: 100px;
+	border: none;
+}
+.digits button {
+	border: 1px solid #343434;
+	background-color: black;
+	color: #f4f1f1;
+}
+.digits button:active {
+	background-color: rgb(214, 209, 209);
+}
+
+/* saved calculation and input screen */
+
+.show-input {
+	grid-area: total;
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+	border-radius: 2px;
+	border: 1px solid #343434;
+	width: 19.8rem;
+	min-height: 5rem;
+	color: #f4f1f1;
+	font-size: 2rem;
+}
+.input {
+	margin-top: 10px;
+	max-width: 19rem;
+	word-wrap: break-word;
+}
+.saved-calc {
+	margin-top: 10px;
+	font-size: 13px;
+	width: 19.5rem;
+	max-height: 5rem;
+	overflow-x: auto;
+	word-wrap: break-word;
+}
+
+/* Grid Alignment */
+
+.wrapper,
+.subgrid {
+	display: grid;
+}
+.wrapper {
+	grid-template-areas:
+		"total total total total"
+		"modifier modifier modifier operator"
+		"digit digit digit operator"
+		"digit digit digit operator"
+		"digit digit digit operator"
+		"digit digit digit operator";
+	grid-auto-columns: 1fr;
+}
+
+.modifiers {
+	grid-area: modifier;
+}
+.operations {
+	grid-area: operator;
+}
+.digits {
+	grid-area: digit;
+}
+
+.modifiers {
+	grid-auto-flow: column;
+	grid-auto-columns: 1fr;
+}
+
+.digits {
+	display: flex;
+	flex-wrap: wrap;
+}
+.digits button {
+	flex: 1 0 26%;
+}
+@media (min-width: 375px) {
+	.show-input {
+		width: 23.8rem;
+	}
+	.input {
+		max-width: 23rem;
+	}
+	.saved-calc {
+		width: 23.5rem;
+	}
+}
+
+@media (min-width: 425px) {
+	.show-input {
+		width: 25.8rem;
+	}
+	.input {
+		max-width: 25rem;
+	}
+	.saved-calc {
+		width: 25.5rem;
+	}
+}
